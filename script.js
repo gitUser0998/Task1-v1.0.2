@@ -170,7 +170,7 @@ function registerUser() {
         document.getElementById("txtUserName_inputID").value = "";
         document.getElementById("txtPassword_inputID").value = "";
         document.getElementById("txtReenterPassword_inputID").value = "";
-        document.getElementById("username").focus();
+        document.getElementById("txtUserName_inputID").focus();
     }
 }
 
