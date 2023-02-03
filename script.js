@@ -195,7 +195,7 @@ function Authenticate() {
 
 
 /*   todolist script
-*
-*/
-validate task if it already exists or No
+*validate task if it already exists or No
 somehow store to do list for a user 
+*/
+
