@@ -1,0 +1,74 @@
+.HeaderPlaceHolder,
+#MainHeader {
+    height: 70px;
+}
+
+#MainHeader {
+    width: 101%;
+    background-color: #2d7ed0;
+    /*box-shadow: 0 0 5px #DBDBDB;*/
+    margin-bottom: 50px;
+    margin-left: -8px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+#MainHeader table {
+    height: 100%;
+    width: 100%;
+}
+
+#MainHeader table td.HeaderLogo {
+    /*background: #fff;*/
+    width: 210px;
+    /*box-shadow: 0 0 5px #DBDBDB;*/
+}
+
+#MainHeader table td.HeaderLogo img {
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+
+#MainHeader table td.HeaderSpacer {
+    width: 30px;
+}
+
+#MainHeader table td.HeaderIcon {
+
+    width: 50px;
+
+}
+
+#MainHeader table td.HeaderIcon svg {
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#MainHeader table td.HeaderTitle p {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'bpg algeti';
+}
+
+
+
+#headerChatDiv {
+
+    cursor: pointer
+}
+
+#headerChatSpan {
+    color: white;
+    /*    display: flex;*/
+    /*margin-bottom: 34px;*/
+    font-size: 11px;
+    display: block;
+    width: 50px;
+    /*    cursor: pointer*/
+}

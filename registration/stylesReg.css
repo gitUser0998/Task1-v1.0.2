@@ -1,0 +1,223 @@
+table {
+    border-spacing: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.input_normal tr td>input[type=text],
+.input_normal tr td>select,
+textarea {
+    background: none;
+    border: 0;
+    height: 21px;
+    font-size: 13px;
+    color: #383838;
+    font-family: BPG Arial;
+    padding: 3px 0px 4px 6px;
+    width: 90%;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+p,
+a,
+img,
+ul,
+li,
+table,
+h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: BPG Arial;
+}
+
+html {
+    height: 100%;
+}
+
+i {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+/* BASIC MARKUP */
+
+body {
+    background: #f3f3f3;
+    font-size: 12px;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+
+.PageContent {
+    padding-top: 30px;
+    margin: 0 auto;
+    min-height: 100%;
+    margin-bottom: -212px;
+    min-width: 1000px;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.not-selectable,
+.PageContent #MainPage {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.needHelp {
+    position: fixed;
+    right: -40px;
+    top: 50%;
+    z-index: 11;
+}
+
+.needHelp>div {
+    background-color: #30609b;
+}
+
+.needHelp>div>p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.needHelp>div:first-child {
+    position: relative;
+    height: 165px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    width: 80px;
+    cursor: pointer;
+    transition: transform 200ms;
+}
+
+.needHelp>div:first-child>p {
+    position: absolute;
+    top: calc(0px + 48px);
+    left: calc(0px - 54px);
+    background: none;
+    transform: rotate(090deg);
+    padding: 18px 15px;
+    font-family: "OpenSans";
+    font-size: 22px;
+    height: 33px;
+}
+
+
+.needHelp>div:first-child:hover {
+    transform: translateX(-15px);
+    background: #1a3f62;
+}
+
+#pnlRegistrationFields {
+    width: 881px;
+    height: 510px;
+    margin-top: 15px;
+}
+
+#pnlRegistrationFields .registration_header_text {
+    font-size: 25px;
+    text-align: center;
+    color: #696969;
+    margin-bottom: 29px;
+}
+
+#pnlRegistrationFields .registration_form {
+    padding: 30px 0 0 0;
+}
+
+#pnlRegistrationFields .registration_form .rsInput input[type=text],
+.rsInput input[type=password],
+.rsInput input[type=email] {
+    height: 40px;
+    width: 100%;
+}
+
+#pnlRegistrationFields .registration_form .fields_column {
+    width: 402px;
+    float: left;
+}
+
+#pnlRegistrationFields .registration_form .fields_column .rsInput {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#pnlRegistrationFields .registration_form .fields_column input[type=submit] {
+    height: 54px;
+    margin-top: 30px;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    background: #3c76cc;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#pnlRegistrationFields .registration_form .fields_column input[type=submit]:hover {
+    background: #457bcc;
+}
+
+#pnlRegistrationFields .registration_form .fields_column .field {
+    height: 120px;
+}
+
+#pnlRegistrationFields .registration_form .fields_column .field .validate_text {
+    font-style: italic;
+    font-size: 11px;
+}
+
+.RegistrationHelp {
+    float: left;
+    color: #464646;
+    font-size: 16px;
+    font-family: 'bpg algeti';
+    font-weight: bold;
+    vertical-align: middle;
+    margin-top: 43px;
+    cursor: pointer;
+}
+
+.RegistrationHelp:hover {
+    text-decoration: underline;
+}
+
+.RegistrationHelp i {
+    color: #60a642;
+    font-size: 27px;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.material-symbols-outlined {
+    position: relative;
+    vertical-align: -6px;
+}

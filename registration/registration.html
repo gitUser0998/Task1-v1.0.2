@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head id="ctl00_Head1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../script.js"></script>
+    <link href="stylesReg.css" rel="stylesheet" type="text/css" />
+    <link href="../headerStyles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <title>
+        შემოსავლების სამსახური
+    </title>
+</head>
+
+<body>
+    <div class="HeaderPlaceHolder"></div>
+    <header id="MainHeader" class="not-selectable">
+        <table>
+            <tr>
+                <td class="HeaderSpacer"></td>
+                <td class="HeaderLogo">
+                    <img src="../RSLogoNew.png" /></a>
+                </td>
+                <td class="HeaderSpacer"></td>
+                <td class="HeaderIcon"></td>
+                <td id="ctl00_HeaderTitle" class="HeaderTitle"></td>
+                <td class="HeaderIcon" id="orgTd" style="display: none"></td>
+                <td class="HeaderIcon" id="headerChatDiv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                        <path id="Subtraction_1" data-name="Subtraction 1"
+                            d="M-2012,30a15.079,15.079,0,0,1-5.748-1.156.4.4,0,0,0-.147-.024,3.717,3.717,0,0,0-1.023.294l-.006,0c-.18.067-.384.142-.6.216a8.473,8.473,0,0,1-2.755.513,7.086,7.086,0,0,1-3.568-1,4.05,4.05,0,0,0,2.879-2.5,1.5,1.5,0,0,0-.307-1.449A14.752,14.752,0,0,1-2027,15a14.9,14.9,0,0,1,4.393-10.607A14.9,14.9,0,0,1-2012,0a14.9,14.9,0,0,1,10.607,4.393A14.9,14.9,0,0,1-1997,15a14.9,14.9,0,0,1-4.393,10.606A14.9,14.9,0,0,1-2012,30Zm7-17a2,2,0,0,0-2,2,2,2,0,0,0,2,2,2,2,0,0,0,2-2A2,2,0,0,0-2005,13Zm-7,0a2,2,0,0,0-2,2,2,2,0,0,0,2,2,2,2,0,0,0,2-2A2,2,0,0,0-2012,13Zm-7,0a2,2,0,0,0-2,2,2,2,0,0,0,2,2,2,2,0,0,0,2-2A2,2,0,0,0-2019,13Z"
+                            transform="translate(2027 0)" fill="#fff" />
+                    </svg>
+                    <span id="headerChatSpan">RS ჩათი</span>
+                </td>
+                <td class="HeaderSpacer"></td>
+            </tr>
+        </table>
+    </header>
+    <br>
+    <div class="PageContent">
+        <div class="content">
+            <div id="pnlRegistrationFields">
+                <div class="registration_header_text">
+                    <l>ახალი მომხმარებლის რეგისტრაცია</l>
+                </div>
+                <div class="registration_form">
+                    <form id="registrationForm" onsubmit="return validateRegistrationForm()">
+                        <div class="fields_column" style="float: left;">
+                            <div class="field">
+                                <div class=' rsInput  ' id='txtUserName'>
+                                    <p style="font-weight: bold;">
+                                        <l>მომხმარებელი (6 სიმბოლოზე მეტი)</l>
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td style='width:100%;'><input type="text" id='txtUserName_inputID'
+                                                    name='txtUserName_inputName' pattern="[^\/:*?\x22]+"
+                                                    title="Invalid input" maxlength='32' required />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="validate_text">
+                                    <l>არ უნდა შეიცავდეს</l>
+                                    : /, :, *, ?, ", <,>, |
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class=' rsInput  ' id='txtPassword'>
+                                    <p style="font-weight: bold;">
+                                        <l>პაროლი (6 სიმბოლოზე მეტი)</l>
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td style='width:100%;'><input type="password" id='txtPassword_inputID'
+                                                    name='txtPassword_inputName'
+                                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,32}" required /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="validate_text">
+                                    <l>მინიმუმ 1 ციფრი, 1 დიდი და 1 პატარა სიმბოლო</l>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class=' rsInput  ' id='txtReenterPassword'>
+                                    <p style="font-weight: bold;">
+                                        <l>გაიმეორეთ პაროლი</l>
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td style='width:100%;'><input type="password"
+                                                    id='txtReenterPassword_inputID' name='txtReenterPassword_inputName'
+                                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,32}" required /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <a href="RegistrationHelp.pdf" target="_blank">
+                                <div class="RegistrationHelp"><span class="material-symbols-outlined"
+                                        style="color: rgb(7, 121, 36);">
+                                        help
+                                    </span>
+                                    <l>რეგისტრაციის პროცედურები</l>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fields_column" style="float: right;">
+                            <div class="field">
+                                <div class=' rsInput  ' id='txtPersonalID'>
+                                    <p style="font-weight: bold;">
+                                        <l>საიდენტიფიკაციო/პირადი ნომერი</l>
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td style='width:100%;'><input type="text" id='txtPersonalID_inputID'
+                                                    name='txtPersonalID_inputName' pattern="[0-9]{11}" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class=' rsInput  ' id='txtPhone'>
+                                    <p style="font-weight: bold;">
+                                        <l>მობილურის ნომერი</l> (5XXXXXXXX)
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td style='width:100%;'><input type="text" id='txtPhone_inputID'
+                                                    name='txtPhone_inputName' pattern="[0-9]{9}" />
+                                                <! --აქ მჭირდება ვალიდაცია რო 5-ით იწყებოდეს -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class=' rsInput  ' id='txtEmail'>
+                                    <p style="font-weight: bold;">
+                                        <l>ელექტრონული ფოსტა</l>
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td style='width:100%;'><input type="email" id='txtEmail_inputID'
+                                                    name='txtEmail_inputName'
+                                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <input type="submit" value="რეგისტრაცია" onclick="registerUser()" />
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <a href="../login/login.html">
+        <aside class="needHelp">
+            <div id="openFeedback">
+                <p id="openFeedbackText">უკუკავშირი</p>
+            </div>
+        </aside>
+    </a>
+</body>
+
+</html>

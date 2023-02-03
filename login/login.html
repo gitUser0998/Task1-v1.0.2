@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="stylesLogin.css" type="text/css">
+    <link rel="stylesheet" href="../headerStyles.css" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>>
+
+
+<body>
+    <div class="HeaderPlaceHolder"></div>
+    <header id="MainHeader" class="not-selectable">
+        <table>
+            <tr>
+                <td class="HeaderSpacer"></td>
+                <td class="HeaderLogo">
+                    <img src="../RSLogoNew.png" /></a>
+                </td>
+                <td class="HeaderSpacer"></td>
+                <td class="HeaderIcon"></td>
+                <td id="ctl00_HeaderTitle" class="HeaderTitle"></td>
+                <td class="HeaderIcon" id="orgTd" style="display: none"></td>
+                <td class="HeaderIcon" id="headerChatDiv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                        <path id="Subtraction_1" data-name="Subtraction 1"
+                            d="M-2012,30a15.079,15.079,0,0,1-5.748-1.156.4.4,0,0,0-.147-.024,3.717,3.717,0,0,0-1.023.294l-.006,0c-.18.067-.384.142-.6.216a8.473,8.473,0,0,1-2.755.513,7.086,7.086,0,0,1-3.568-1,4.05,4.05,0,0,0,2.879-2.5,1.5,1.5,0,0,0-.307-1.449A14.752,14.752,0,0,1-2027,15a14.9,14.9,0,0,1,4.393-10.607A14.9,14.9,0,0,1-2012,0a14.9,14.9,0,0,1,10.607,4.393A14.9,14.9,0,0,1-1997,15a14.9,14.9,0,0,1-4.393,10.606A14.9,14.9,0,0,1-2012,30Zm7-17a2,2,0,0,0-2,2,2,2,0,0,0,2,2,2,2,0,0,0,2-2A2,2,0,0,0-2005,13Zm-7,0a2,2,0,0,0-2,2,2,2,0,0,0,2,2,2,2,0,0,0,2-2A2,2,0,0,0-2012,13Zm-7,0a2,2,0,0,0-2,2,2,2,0,0,0,2,2,2,2,0,0,0,2-2A2,2,0,0,0-2019,13Z"
+                            transform="translate(2027 0)" fill="#fff" />
+                    </svg>
+                    <span id="headerChatSpan">RS ჩათი</span>
+                </td>
+                <td class="HeaderSpacer"></td>
+            </tr>
+        </table>
+    </header>
+    <div class="login">
+        <div id="leftSide">
+            <div class="user_login">
+                <div class="login_pane">
+                    <div id="authorization">
+                        <input type="text" placeholder="მომხმარებელი ან საიდენტიფიკაციო კოდი" id="username"
+                            maxlength="60" />
+                        <input type="password" placeholder="პაროლი" id="password" maxlength="50" />
+                        <input type="button" id="btnLogin" class="btn_login" value="ავტორიზაცია"
+                            onclick="Authenticate()" />
+                        <div style="padding-top: 30px"><a href="../registration/registration.html" id="a_register"
+                                style="font-weight: bold;">
+                                <l>რეგისტრაცია</l>
+                            </a></div>
+                        <div style="padding-top: 10px">
+                            <l>მომხმარებლის / პაროლის აღდგენა</l>
+                        </div>
+                    </div>
+                    <div id="testUserContainer" onclick="ShowDialog()">
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
+                        <p>
+                            <l>სატესტო მომხმარებლით ავტორიზაცია</l>
+                        </p>
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </div>
+                    <div id="testUserChoose" class="dialogDIVStyle" style="visibility: hidden">
+                        <div onclick="authTestUser()">
+                            <i class="material-icons"><span class="material-symbols-outlined">
+                                    account_circle
+                                </span></i>
+                            <p>
+                                <l>სატესტო</l>1
+                            </p>
+                        </div>
+                        <div onclick="authTestUser()">
+                            <i class="material-icons"><span class="material-symbols-outlined">
+                                    account_circle
+                                </span></i>
+                            <p>
+                                <l>სატესტო</l>2
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rightSide">
+
+
+            <div id="twoStepVerification">
+                <span id="header3">
+                    <l>ორბიჯიანი (SMS) ავტორიზაცია</l>
+                </span>
+                <div class="divStyle">
+                    <l>შემოსავლების სამსახურის ელექტრონული სერვისების გვერდზე მომხმარებლის უფლებების, უსაფრთხოებისა და
+                        ინფორმაციის</l>
+                    <span id="point3">... </span>
+                    <a id="stepShow" href="#" onclick="showSpStyle();" style="font-size: 13px;">
+                        <l>იხილეთ მეტი</l>
+                    </a>
+
+                    <span style="text-align: justify; display: none" id="stHide">
+
+                        <l>კონფიდენციალურობის დაცვის მიზნით, შემუშავდა ელექტრონული სერვისების გვერდზე ავტორიზაციის
+                            დამატებითი მექანიზმი, ეგრეთ წოდებული </l>
+                        <b>
+                            <l>ორბიჯიანი (SMS) ავტორიზაცია</l>
+                        </b>.<br />
+                        <br />
+                        <l>თქვენ საშუალება გაქვთ, გაააქტიუროთ ავტორიზაციის ეს მექანიზმი და სისტემასთან დაკავშირებისას,
+                            სახელის და პაროლის შეყვანის შემდგომ, თქვენ მიერ</l>
+                        <b>
+                            <l>წინასწარ მითითებულ ტელეფონის ნომერზე</l>
+                        </b>
+                        <l>, SMS შეტყობინების სახით, მოგივათ </l>
+                        <b>
+                            <l>ავტორიზაციის კოდი</l>
+                        </b>
+                        <l>და მხოლოდ ამის შემდგომ შეძლებთ სისტემაში მუშაობას. ეს პროცედურა დაგიცავთ მომხმარებლის სახელის
+                            და პაროლის მოპარვის შემთხვევაშიც კი თქვენს პორტალზე არასანქცირებული შეღწევისგან.</l>
+                        <br />
+                        <br />
+                        <l>ორბიჯიანი (SMS) ავტორიზაციის ჩართვისას, თქვენ აუცილებლად მოგიწევთ კოდური სიტყვის დაფიქსირება
+                            სისტემაში. </l>
+                        <b>
+                            <l>კარგად დაიმახსოვრეთ კოდური სიტყვა</l>
+                        </b>,
+                        <l>რადგან მისი ნახვა და შეცვლა შეუძლებელია. კოდური სიტყვის დახმარებით თქვენ შეძლებთ სისტემაში
+                            ავტორიზაციის გარეშე ტელეფონის ნომრის შეცვლას.</l>
+                        <br />
+                        <br />
+                        <b>
+                            <l>იმ შემთხვევაში, თუ თქვენ დაგავიწყდათ პაროლი და კოდური სიტყვა, მათ შეცვლას მოახერხებთ
+                                შემოსავლების სამსახურის ნებისმიერ სერვისცენტრში.</l>
+                        </b>
+                        <a href="#" onclick="hideSpStyle();" style="font-size: 13px;">
+                            <l>დამალვა</l>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <hr />
+            <div id="protocol">
+                <span id="header1">
+                    <l>პროტოკოლში ცვლილების შესახებ შეტყობინებების გამოწერა</l>
+                    !
+                </span>
+                <div class="divStyle">
+                    <l>თუ თქვენ, იყენებთ შემოსავლების სამსახურის მიერ შემოთავაზებულ ვებ-სერვისებს (ა/ფაქტურა, სასაქონლო
+                        ზედნადების და სხვა</l>
+                    <span id="point">... </span>
+                    <a id="protShow" href="#" onclick="showPStyle()" style="font-size: 13px;">
+                        <l>იხილეთ მეტი</l>
+                    </a>
+                    <span id="sHide" style="display: none;">
+                        <l>სახის მონაცემების წარმოება) და </l>
+                        <b>
+                            <l>აღნიშნული სერვისები ჩაშენებული გაქვთ თქვენს პროგრამულ პროდუქტებში</l>
+                        </b>,
+                        <l>გთხოვთ შეავსოთ </l>
+                        <a style="color: #1ea3f0" href="https://eservices.rs.ge/ProtocolSubscribe.aspx">
+                            <l>ელექტრონული ფორმა</l>
+                        </a>
+                        <l>რათა დროულად მიიღოთ ინფორმაცია ვებ-სერვისებში ტექნიკური ცვლილებების დაგეგმვისა და
+                            მიმდინარეობების შესახებ. </l>
+                        <a id="protHide" href="#" onclick="hidePStyle() " style="font-size: 13px;">
+                            <l>დამალვა</l>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="clear: both"></div>
+
+    <div class="LoginFooter">
+        <table>
+            <tr>
+                <td rowspan="2" style="width: 15%">
+                    <div>
+                        <l>საინფორმაციო ცენტრი</l>
+                    </div>
+                    <div style="margin-top: 3px; font-size: 16px;"><b>2 299 299</b></div>
+                    <br />
+                    <div>
+                        <label id="LanguageSwitch">English Version</label>
+                    </div>
+                </td>
+                <td style="width: 15%"><span class="material-symbols-outlined">
+                        file_download_done
+                    </span><label onclick="window.location.href='https://eservices.rs.ge/app/Downloads'">
+                        <l>დამხმარე პროგრამები</l>
+                    </label>
+                </td>
+                <td style="width: 20%"><span class="material-symbols-outlined">
+                        video_library
+                    </span><label onclick="window.location.href='app/VideoHelp'">
+                        <l>ვიდეო ინსრტუქცია</l>
+                    </label></td>
+            </tr>
+            <tr>
+                <td style="width: 15%"><span class="material-symbols-outlined">
+                        help
+                    </span><label onclick="window.location.href='http://wiki.rs.ge/'">
+                        <l>WIKI</l>
+                    </label></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
